@@ -7,7 +7,7 @@ import java.util.List;
 public class TestMethods {
 
     public static void main(String[] args) {
-        Integer array[] = new Integer[]{1,2,3,4,5};
+        Integer array[] = new Integer[]{1, 2, 3, 4, 5};
         genericMethod.change(array, 1, 2);
         System.out.println(array[1]);
 
@@ -31,6 +31,9 @@ public class TestMethods {
         System.out.println(box1.compare(box2));
         box2.addFruit(new Apple(1.0));
         System.out.println(box2.compare(box1));
-
+        Box<Apple> box3 = new Box<>();
+        box3.takeFruits(box2);
+        System.out.println(box2.getWeight());
+        System.out.println(box3.getWeight());
     }
 }
